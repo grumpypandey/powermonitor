@@ -1,0 +1,13 @@
+<h2>{{ device.name }}</h2>
+
+<p><b>Type:</b> {{ device.device_type }}</p>
+<p><b>Location:</b> {{ device.location }}</p>
+<p><b>Status:</b>
+    {% if is_online %}
+        🟢 Online
+    {% else %}
+        🔴 Offline
+    {% endif %}
+</p>
+
+<p><b>Last Seen:</b> {{ device.last_seen|default:"Never" }}</p>

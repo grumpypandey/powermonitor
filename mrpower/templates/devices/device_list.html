@@ -1,0 +1,11 @@
+<h2>Registered Devices</h2>
+
+<ul>
+    {% for device in devices %}
+        <li>
+            <a href="{% url 'device_detail' device.id %}">
+                {{ device.name }} — {{ device.location }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
